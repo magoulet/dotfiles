@@ -1,0 +1,5 @@
+ENTRY "scan" URL "/mnt/ext/scan"
+ENTRY "immigration" URL "/home/magoulet/gdrive/immigration"
+ENTRY "Downloads" URL "/home/magoulet/Downloads"
+ENTRY "/mnt/ext" URL "/mnt/ext"
+ENTRY "finances" URL "/home/magoulet/gdrive/finances"

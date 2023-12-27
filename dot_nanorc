@@ -1,0 +1,8 @@
+set linenumbers
+set atblanks
+set softwrap
+set autoindent
+set tabsize 4
+set regexp
+set fill 80
+set tabstospaces
