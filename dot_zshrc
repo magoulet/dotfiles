@@ -97,11 +97,11 @@ source $ZSH/oh-my-zsh.sh
 # export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
+if [[ -n $SSH_CONNECTION ]]; then
+  export EDITOR='nano'
+else
+  export EDITOR='nano'
+fi
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -119,9 +119,11 @@ alias bat='batcat'
 alias cp='cp -arp'
 alias df='df -h -x squashfs -x tmpfs -x devtmpfs'
 alias ip='curl ifconfig.me'
+alias joplin='docker run --rm -it --name joplin -e TZ=`cat /etc/timezone` -v joplinData:/root/.config/joplin --network host joplindocker-joplin joplin'
 alias l='ls -larth'
 alias logs='sudo journalctl -b -p err'
 alias lorem='curl http://metaphorpsum.com/paragraphs/4'
+alias ncspot='/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=ncspot io.github.hrkfdn.ncspot'
 alias open='xdg-open'
 alias rm='rm -i'
 alias x='exit'

@@ -1,0 +1,102 @@
+# Accounts
+
+## Account 1 (default)
+source ~/.mutt/account_magoulet_gmail_com
+
+# Folder hooks
+folder-hook 'account_magoulet_gmail_com' 'source ~/.mutt/account_magoulet_gmail_com'
+folder-hook 'account_alphamike_mailfence_com' 'source ~/.mutt/account_alphamike_mailfence_com'
+
+## Macros to switch accounts
+macro index <f2> "<enter-command>unmailboxes *<enter><enter-command>source ~/.mutt/account_magoulet_gmail_com<enter><sync-mailbox><change-folder>!<enter>"
+macro index <f3> "<enter-command>unmailboxes *<enter><enter-command>source ~/.mutt/account_alphamike_mailfence_com<enter><sync-mailbox><change-folder>!<enter>"
+
+## Shortcuts
+bind editor <space> noop
+bind index q noop
+bind index Q exit
+
+### Taming HTML Messages ###
+alternative_order text/plain text/enriched text/html
+set mailcap_path = "~/.mutt/mutt_mailcap"
+auto_view text/html            # Automatically parse html messages through w3m
+auto_view text/x-vcard         # vcard attachments viewed through mutt.vcard.filter
+set implicit_autoview=yes      # Load in pager if setting in .mailcap says 'copiousoutput'.
+
+### Odds and ends ###
+set text_flowed=yes
+set markers=no            # mark wrapped lines of text in the pager with a +
+set smart_wrap            # Don't wrap mid-word
+set pager_context=5       # Retain last line of previous page when scrolling.
+set status_on_top         # Status bar on top
+#push <show-version>       # Shows mutt version at startup
+#set check_new=yes         # Check for new mail
+set sort=threads
+set sort_aux = last-date-received
+#set sort = "reverse-date-received"
+
+## Parsing URL from HTML messages
+### Using urlview to view embedded URLs
+#macro pager \cu |urlview\n
+
+### Using urlscan to view embedded URLs
+macro pager \cu <pipe-entry>'urlscan -d'<enter> 'Follow links with urlscan'
+
+
+### Aliases
+set alias_file=~/.mutt/mail_aliases
+source $alias_file
+set sort_alias=alias
+set display_filter = "~/.mutt/aliasBuilder.sh"
+
+### Colours ###
+
+# (default, white, black, green, magenta, blue, cyan, yellow, red)
+# (bright...)
+# (color1,color2,...,colorN-1)
+#
+#---- --Mutt Colors for Black Background -------
+#       Object	    Foreground	    Background
+color   hdrdefault   yellow            black
+color   quoted       blue              black
+color   signature    blue              black
+color   attachment   red               black
+color   message      brightred         black
+color   error        brightred         black
+color   indicator    black             yellow # Yellow background
+# color   indicator    default           color17 # Dark blue background
+color   status       white             blue
+color   tree         white             black
+color   normal       white             black
+color   markers      red               black
+color   search       white             black
+color   tilde        brightmagenta     black
+color   index        brightred         default ~F
+color   index        white             black "~N|~O"
+color   index        white             red "~D(!~p|~p)"
+
+# Encryption
+source ~/.mutt/gpg.rc
+
+# Sidebar
+bind index,pager B sidebar-toggle-visible
+bind index,pager \Cp sidebar-prev
+bind index,pager \Cn sidebar-next
+bind index,pager \Co sidebar-open
+set sidebar_visible
+# set sidebar_format = "%B%?F? [%F]?%* %?N?%N/?%S"
+set sidebar_format = "%D%?F? [%F]?%* %?N?%N/?%S"
+set mail_check_stats
+set sidebar_folder_indent
+set sidebar_short_path
+
+# color sidebar_background default black # Black background
+# color sidebar_indicator  default color17 # Dark blue background
+color sidebar_indicator  black yellow # Yellow background
+color sidebar_highlight  white   color238 # Grey background
+color sidebar_spool_file yellow  default # Yellow
+color sidebar_unread     cyan    default # Light blue
+color sidebar_new        green   default # Green
+color sidebar_ordinary   default default # Default colors
+color sidebar_flagged    red     default # Red
+color sidebar_divider    color8  default # Dark grey

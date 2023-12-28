@@ -1,0 +1,5 @@
+text/html; w3m -I %{charset} -dump %s -cols $COLUMNS; copiousoutput; description=HTML Text; nametemplate=%s.html
+text/*; more
+
+application/pdf; /usr/bin/qpdfview %s ; print=/usr/bin/qpdfview %s
+application/msword; libreoffice --writer %s; print=libreoffice --writer %s
