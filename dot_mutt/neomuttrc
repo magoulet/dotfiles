@@ -13,8 +13,8 @@ macro index <f3> "<enter-command>unmailboxes *<enter><enter-command>source ~/.mu
 
 ## Shortcuts
 bind editor <space> noop
-bind index q noop
-bind index Q exit
+#bind index q noop
+#bind index Q exit
 
 ### Taming HTML Messages ###
 alternative_order text/plain text/enriched text/html

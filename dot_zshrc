@@ -118,6 +118,7 @@ fi
 alias bat='batcat'
 alias cp='cp -arp'
 alias df='df -h -x squashfs -x tmpfs -x devtmpfs'
+alias gcal='gcalcli calw today 2'
 alias ip='curl ifconfig.me'
 alias joplin='docker run --rm -it --name joplin -e TZ=`cat /etc/timezone` -v joplinData:/root/.config/joplin --network host joplindocker-joplin joplin'
 alias l='ls -larth'
