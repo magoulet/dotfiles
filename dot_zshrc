@@ -80,6 +80,7 @@ copypath
 docker
 docker-compose
 git 
+nvm
 python 
 sublime 
 tmux 
