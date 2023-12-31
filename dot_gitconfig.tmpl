@@ -1,6 +1,6 @@
 [user]
 	name = M-A Goulet
-	email = magoulet@gmail.com
+	email = {{- if eq .chezmoi.hostname "t480s" }}M-A Goulet {{- end }}
 [init]
 	defaultBranch = main
 [credential "https://github.com"]
