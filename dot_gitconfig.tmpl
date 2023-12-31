@@ -1,12 +1,16 @@
 [user]
 	name = M-A Goulet
-	{{ if eq .chezmoi.hostname "t480s" }}email = magoulet@gmail.com
-	{{ else }}email = mgoulet@amazon.com
-	{{ end }}
+	{{- if eq .chezmoi.hostname "t480s" }}
+	email = magoulet@gmail.com
+	{{- else }}
+	email = mgoulet@amazon.com
+	{{- end }}
 [init]
-	{{ if eq .chezmoi.hostname "t480s" }}defaultBranch = main
-	{{ else }}defaultBranch = mainline
-	{{ end }}
+	{{- if eq .chezmoi.hostname "t480s" }}
+	defaultBranch = main
+	{{- else }}
+	defaultBranch = mainline
+	{{-  end }}
 [credential "https://github.com"]
 	helper = 
 	helper = !/usr/bin/gh auth git-credential
