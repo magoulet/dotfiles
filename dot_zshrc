@@ -133,5 +133,6 @@ alias rsync='rsync -av --progress'
 alias cal='ncal -b'
 alias python='python3'
 alias feh='feh -ZF'
+alias dpsa='docker ps -a --format "table {{.ID}}\t{{.Image}}\t{{.Status}}\t{{.Names}}"'
 
 #zprof
