@@ -1,0 +1,7 @@
+Host raspberrypi1
+  HostName raspberrypi1
+  User pi
+
+Host raspberrypi2
+  HostName raspberrypi2
+  User pi
