@@ -5,3 +5,7 @@ Host raspberrypi1
 Host raspberrypi2
   HostName raspberrypi2
   User pi
+
+Host readynas
+  HostName readynas
+  User root
