@@ -34,6 +34,7 @@ set status_on_top         # Status bar on top
 set sort=threads
 set sort_aux = last-date-received
 #set sort = "reverse-date-received"
+set delete=yes
 
 ## Parsing URL from HTML messages
 ### Using urlview to view embedded URLs
