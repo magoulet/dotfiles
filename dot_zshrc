@@ -75,16 +75,16 @@ ZSH_THEME="robbyrussell"
 # Add wisely, as too many plugins slow down shell startup.
 #plugins=(copyfile copypath git python sublime timer tmux web-search zsh-autosuggestions)
 plugins=(
-copyfile 
-copypath 
+copyfile
+copypath
 docker
 docker-compose
-git 
+git
 nvm
-python 
-sublime 
-tmux 
-web-search 
+python
+sublime
+tmux
+web-search
 zsh-autosuggestions
 )
 
