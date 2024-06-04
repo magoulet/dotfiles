@@ -15,6 +15,8 @@ macro index <f3> "<enter-command>unmailboxes *<enter><enter-command>source ~/.mu
 bind editor <space> noop
 #bind index q noop
 #bind index Q exit
+-bind pager <up> previous-line
+-bind pager <down> next-line
 
 ### Taming HTML Messages ###
 alternative_order text/plain text/enriched text/html
