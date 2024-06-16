@@ -137,5 +137,4 @@ alias feh='feh -ZF'
 alias dpsa='docker ps -a --format "table {{.ID}}\t{{.Image}}\t{{.Status}}\t{{.Names}}"'
 
 # Raspberry Pi
-alias temp='source /home/pi/projects/pi_scripts/temp_check.sh'
 alias goaccess='goaccess /var/log/nginx/access.log --log-format=COMBINED'  
