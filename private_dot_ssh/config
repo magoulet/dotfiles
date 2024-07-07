@@ -14,3 +14,7 @@ Host myec2
   HostName 54.71.217.142
   User ubuntu
   IdentityFile ~/.ssh/MyKeyPair.pem
+
+Host moto
+  HostName 192.168.1.59
+  Port 8022
