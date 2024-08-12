@@ -148,7 +148,7 @@ alias goaccess='goaccess /var/log/nginx/access.log --log-format=COMBINED'
 {{ end  }}
 
 # NFS shares
-alias lsnfs='mount | grep nfs'
+alias lsnfs='mount | grep nfs | awk '\''{print $3}'\'''
 alias umountnfs='for m in $(mount | grep nfs | awk '\''{print $3}'\''); do sudo umount $m; done'
 alias mountnfs='sudo mount -a -t nfs'
 
