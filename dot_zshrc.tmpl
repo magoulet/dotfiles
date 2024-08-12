@@ -147,5 +147,10 @@ alias dpsa='docker ps -a --format "table {{ "{{" }}.ID{{ "}}" }}\t{{ "{{" }}.Ima
 alias goaccess='goaccess /var/log/nginx/access.log --log-format=COMBINED'  
 {{ end  }}
 
+# NFS shares
+alias lsnfs='mount | grep nfs'
+alias umountnfs='for m in $(mount | grep nfs | awk '\''{print $3}'\''); do sudo umount $m; done'
+alias mountnfs='sudo mount -a -t nfs'
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
