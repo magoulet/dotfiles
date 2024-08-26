@@ -146,6 +146,9 @@ alias dpsa='docker ps -a --format "table {{ "{{" }}.ID{{ "}}" }}\t{{ "{{" }}.Ima
 {{ if eq .chezmoi.hostname "raspberrypi1" }}
 alias goaccess='goaccess /var/log/nginx/access.log --log-format=COMBINED'  
 {{ end  }}
+{{ if eq .chezmoi.arch "arm64" }}
+alias temp='vcgencmd measure_temp'  
+{{ end  }}
 
 # NFS shares
 alias lsnfs='mount | grep nfs | awk '\''{print $3}'\'''
