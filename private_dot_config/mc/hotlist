@@ -1,5 +1,12 @@
-ENTRY "scan" URL "/mnt/ext/scan"
-ENTRY "immigration" URL "/home/magoulet/gdrive/immigration"
-ENTRY "Downloads" URL "/home/magoulet/Downloads"
+ENTRY "GDrive" URL "~/gdrive"
+ENTRY "temp" URL "~/temp"
+ENTRY "Downloads" URL "~/Downloads"
+ENTRY "dev" URL "~/dev"
+
+---
 ENTRY "/mnt/ext" URL "/mnt/ext"
-ENTRY "finances" URL "/home/magoulet/gdrive/finances"
+---
+ENTRY "finances" URL "~/gdrive/finances"
+---
+ENTRY "scan" URL "/mnt/ext/scan"
+
