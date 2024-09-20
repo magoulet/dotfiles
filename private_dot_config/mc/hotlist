@@ -10,5 +10,5 @@ ENTRY "finances" URL "~/gdrive/finances"
 ---
 ENTRY "scan" URL "/mnt/ext/scan"
 
-ENTRY "raspberrypi1" URL "/mnt/ext/raspberrypi1"
-ENTRY "raspberrypi2" URL "/mnt/ext/raspberrypi2"
+ENTRY "raspberrypi1" URL "/mnt/raspberrypi1"
+ENTRY "raspberrypi2" URL "/mnt/raspberrypi2"
