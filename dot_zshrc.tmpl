@@ -133,7 +133,7 @@ alias dpsa='docker ps -a --format "table {{ "{{" }}.ID{{ "}}" }}\t{{ "{{" }}.Ima
 alias ducks='du -cksh * | sort -hr | head -n 15'
 alias gcal='gcalcli calw today 2'
 alias ip='curl ifconfig.me'
-alias joplin='docker run --rm -it --name joplin -e TZ=`cat /etc/timezone` -v joplinData:/root/.config/joplin --network host  joplin-docker-joplin joplin'
+alias joplin='docker run --rm -it --name joplin -e TZ=`cat /etc/timezone` -v joplinData:/root/.config/joplin --network host "joplin-docker-joplin" joplin'
 alias l='ls -larth'
 alias logs='sudo journalctl -b -p err'
 alias lorem='curl http://metaphorpsum.com/paragraphs/4'
