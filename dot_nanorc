@@ -1,4 +1,4 @@
-set linenumbers
+# set linenumbers
 set atblanks
 set softwrap
 set autoindent
