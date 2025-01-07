@@ -146,8 +146,8 @@ alias x='exit'
 
 # NFS shares
 alias lsnfs='mount | grep nfs | awk '\''{print $3}'\'''
-alias umountnfs='for m in $(mount | grep nfs | awk '\''{print $3}'\''); do sudo umount $m; done'
-alias mountnfs='sudo mount -a -t nfs'
+alias nfsumount='for m in $(mount | grep nfs | awk '\''{print $3}'\''); do sudo umount $m; done'
+alias nfsmount='sudo mount -a -t nfs'
 
 {{- if eq .chezmoi.arch "amd64" }}
 alias ncspot='/usr/bin/flatpak run io.github.hrkfdn.ncspot'
