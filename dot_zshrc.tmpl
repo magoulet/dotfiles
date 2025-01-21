@@ -133,14 +133,6 @@ alias dpsa='docker ps -a --format "table {{ "{{" }}.ID{{ "}}" }}\t{{ "{{" }}.Ima
 alias ducks='du -cksh * | sort -hr | head -n 15'
 alias gcal='gcalcli calw today 2'
 alias ip='curl ifconfig.me'
-alias joplin='docker run --rm -it --name joplin \
-    -e TZ=`cat /etc/timezone` \
-    -e DISPLAY=$DISPLAY \
-    -e TERM=xterm-256color \
-    -v /tmp/.X11-unix:/tmp/.X11-unix \
-    -v joplinData:/root/.config/joplin \
-    --network host \
-    joplin-docker-joplin joplin'
 alias l='ls -larth'
 alias logs='sudo journalctl -b -p err'
 alias lorem='curl http://metaphorpsum.com/paragraphs/4'
@@ -170,6 +162,19 @@ alias goaccess='goaccess /var/log/nginx/access.log --log-format=COMBINED'
 {{- if eq .chezmoi.arch "arm64" }}
 alias temp='vcgencmd measure_temp'  
 {{ end  }}
+
+# Shell Functions
+joplin() {
+    docker run --rm -it --name joplin \
+        -e TZ=$(cat /etc/timezone) \
+        -e DISPLAY=$DISPLAY \
+        -e TERM=xterm-256color \
+        -v /tmp/.X11-unix:/tmp/.X11-unix \
+        -v $HOME/.Xauthority:/root/.Xauthority:rw \
+        -v joplinData:/root/.config/joplin \
+        --network host \
+        joplin-docker-joplin joplin
+}
 
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
