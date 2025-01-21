@@ -135,8 +135,8 @@ alias gcal='gcalcli calw today 2'
 alias ip='curl ifconfig.me'
 alias joplin='docker run --rm -it --name joplin \
     -e TZ=`cat /etc/timezone` \
-    -e TERM=xterm-256color \
     -e DISPLAY=$DISPLAY \
+    -e TERM=xterm-256color \
     -v /tmp/.X11-unix:/tmp/.X11-unix \
     -v joplinData:/root/.config/joplin \
     --network host \
