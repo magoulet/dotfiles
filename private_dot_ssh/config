@@ -23,3 +23,6 @@ Host tars
   HostName tars
   User magoulet
   
+Host ugreen-nas
+  HostName ugreen-nas.local
+  User magoulet
