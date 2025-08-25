@@ -112,3 +112,4 @@ if ! shopt -oq posix; then
 fi
 
 BROWSER="firefox"; export BROWSER;
+. "$HOME/.cargo/env"
