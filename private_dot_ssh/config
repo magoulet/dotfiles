@@ -22,6 +22,7 @@ Host moto
 Host tars
   HostName tars
   User magoulet
+  ForwardX11 yes
   
 Host ugreen-nas
   HostName ugreen-nas.local
