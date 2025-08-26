@@ -9,7 +9,7 @@ size = 10.0
 TERM = 'xterm-256color'
 
 [window]
-opacity = 0.9
+opacity = 1.0
 decorations= 'full'
 title= 'Alacritty'
 dynamic_title= true
