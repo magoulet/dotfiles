@@ -19,7 +19,7 @@ set-option -g set-titles-string "#h"
 # Mouse support
 set -g mouse on
 
-
+# Style
 {{- if eq .chezmoi.hostname "tars" }}
 set -g pane-active-border-style fg=#bc6c25,bg=black
 set -g pane-border-style fg=white,bg=black
@@ -31,7 +31,6 @@ set-window-option -g window-status-style bg=#bc6c25,fg=#fefae0
 set -g status-style "bg=#bc6c25"
 {{ end }}
 
-
 {{- if eq .chezmoi.hostname "t480s" }}
 set -g pane-active-border-style fg=#145da0,bg=black
 set -g pane-border-style fg=white,bg=black
@@ -39,7 +38,5 @@ set -g pane-border-lines heavy
 set-window-option -g window-status-current-style bg=#145da0,fg=#b1d4e0
 set-window-option -g window-status-style bg=#000c66,fg=white
 
-# Status bar
 set -g status-style "bg=#000c66" 
 {{ end }}
-
