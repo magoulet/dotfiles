@@ -19,15 +19,18 @@ set-option -g set-titles-string "#h"
 # Mouse support
 set -g mouse on
 
-{{- if eq .chezmoi.hostname "tars" }}
-set -g pane-active-border-style fg=red,bg=black
+{{ if eq .chezmoi.hostname "tars" }}
+set -g pane-active-border-style fg=#bc6c25,bg=black
 set -g pane-border-style fg=white,bg=black
 set -g pane-border-lines heavy
-set-window-option -g window-status-current-style bg=red,fg=white
-set-window-option -g window-status-style bg=black,fg=white
+
+set-window-option -g window-status-current-style bg=#fefae0,fg=black
+set-window-option -g window-status-style bg=#bc6c25,fg=#fefae0
+
+set -g status-style "bg=#bc6c25"
 {{ end }}
 
-{{- if eq .chezmoi.hostname "t480s" }}
+{{ if eq .chezmoi.hostname "t480s" }}
 set -g pane-active-border-style fg=#145da0,bg=black
 set -g pane-border-style fg=white,bg=black
 set -g pane-border-lines heavy
