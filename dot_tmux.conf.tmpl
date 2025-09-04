@@ -1,6 +1,10 @@
 # Easily reload configuration
 bind r source-file ~/.tmux.conf
 
+# Fix Home and End keys
+bind-key -n Home send Escape "OH"
+bind-key -n End send Escape "OF"
+
 # Set the correct terminal type
 set -g default-terminal "xterm-256color"
 
