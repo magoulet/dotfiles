@@ -15,4 +15,4 @@ decorations = 'full'
 title = 'Alacritty'
 dynamic_title = true
 padding = { x = 0, y = 0 }
-resize_increments = true
+resize_increments = false
