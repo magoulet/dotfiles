@@ -9,7 +9,7 @@ size = 10
 TERM = 'xterm-256color'
 
 [window]
-opacity = 0.95
+opacity = 1
 blur = true
 decorations = 'full'
 title = 'Alacritty'
