@@ -167,17 +167,17 @@ alias temp='vcgencmd measure_temp'
 {{ end  }}
 
 # Shell Functions
-joplin() {
-    docker run --rm -it --name joplin \
-        -e TZ=$(cat /etc/timezone) \
-        -e DISPLAY=$DISPLAY \
-        -e TERM=xterm-256color \
-        -v /tmp/.X11-unix:/tmp/.X11-unix \
-        -v $HOME/.Xauthority:/root/.Xauthority:rw \
-        -v joplinData:/root/.config/joplin \
-        --network host \
-        joplin-docker-joplin joplin
-}
+# joplin() {
+    # docker run --rm -it --name joplin \
+        # -e TZ=$(cat /etc/timezone) \
+        # -e DISPLAY=$DISPLAY \
+        # -e TERM=xterm-256color \
+        # -v /tmp/.X11-unix:/tmp/.X11-unix \
+        # -v $HOME/.Xauthority:/root/.Xauthority:rw \
+        # -v joplinData:/root/.config/joplin \
+        # --network host \
+        # joplin-docker-joplin joplin
+# }
 
 venv() {
   # if already in a venv, deactivate it
