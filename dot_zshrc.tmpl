@@ -206,7 +206,11 @@ venv() {
 source <(fzf --zsh)
 
 # Source the .env file if it exists
-
 if [ -f "$HOME/.env" ]; then
     source "$HOME/.env"
 fi
+
+# Pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init - zsh)"
