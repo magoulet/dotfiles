@@ -185,25 +185,6 @@ alias temp='vcgencmd measure_temp'
         # joplin-docker-joplin joplin
 # }
 
-venv() {
-  # if already in a venv, deactivate it
-  if [[ -n $VIRTUAL_ENV ]]; then
-    echo "Deactivating \$VIRTUAL_ENV"
-    deactivate
-  fi
-
-  # path to your “global” venv
-  local GV="$HOME/.venv/global"
-  if [[ -d $GV ]]; then
-    echo "Activating $GV"
-    source "$GV/bin/activate"
-  else
-    echo "ERROR: no venv at $GV"
-    return 1
-  fi
-}
-
-
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
