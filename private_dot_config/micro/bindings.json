@@ -1,5 +1,6 @@
 {
     "Alt-/": "lua:comment.comment",
+    "CtrlDelete": "DeleteWordRight",
     "CtrlUnderscore": "lua:comment.comment",
-    "CtrlDelete": "DeleteWordRight"
+    "F4": "command:jumptag"
 }
