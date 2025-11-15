@@ -6,14 +6,10 @@ Host raspberrypi2
   HostName raspberrypi2
   User pi
 
-Host readynas
-  HostName readynas
-  User root
-
-Host myec2
-  HostName 54.71.217.142
-  User ubuntu
-  IdentityFile ~/.ssh/MyKeyPair.pem
+Host MyFirstEC2Instance
+  HostName ec2-44-200-188-58.compute-1.amazonaws.com
+  User ec2-user
+  IdentityFile ~/.ssh/ec2_keypairs/A4L.pem
 
 Host moto
   HostName 192.168.1.59
