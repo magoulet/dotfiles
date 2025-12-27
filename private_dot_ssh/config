@@ -15,6 +15,10 @@ Host moto
   HostName 192.168.1.59
   Port 8022
 
+Host tars-wireguard
+    HostName 10.248.229.1
+    User magoulet
+
 Host tars
   HostName tars
   User magoulet
