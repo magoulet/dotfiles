@@ -1,9 +1,9 @@
 Host raspberrypi1
-  HostName raspberrypi1
+  HostName raspberrypi1.lan
   User pi
 
 Host raspberrypi2
-  HostName raspberrypi2
+  HostName raspberrypi2.lan
   User pi
 
 Host MyFirstEC2Instance
@@ -20,10 +20,10 @@ Host tars-wireguard
     User magoulet
 
 Host tars
-  HostName tars
+  HostName tars.lan
   User magoulet
   ForwardX11 yes
   
 Host ugreen-nas
-  HostName ugreen-nas.local
+  HostName ugreen-nas.lan
   User magoulet
