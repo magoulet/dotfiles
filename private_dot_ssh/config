@@ -22,7 +22,6 @@ Host tars-wireguard
 Host tars
   HostName tars.lan
   User magoulet
-  ForwardX11 yes
   
 Host ugreen-nas
   HostName ugreen-nas.lan
