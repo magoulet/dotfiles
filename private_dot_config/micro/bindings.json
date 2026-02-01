@@ -2,5 +2,8 @@
     "Alt-/": "lua:comment.comment",
     "CtrlDelete": "DeleteWordRight",
     "CtrlUnderscore": "lua:comment.comment",
-    "F4": "command:jumptag"
+    "F12": "command:makeup",
+    "F4": "command:jumptag",
+    "F5": "command:runit",
+    "F9": "command:makeupbg"
 }
