@@ -1,4 +1,4 @@
-ENTRY "GDrive" URL "~/gdrive"
+ENTRY "ncloud" URL "~/nextcloud"
 ENTRY "temp" URL "~/temp"
 ENTRY "Downloads" URL "~/Downloads"
 ENTRY "dev" URL "~/dev"
