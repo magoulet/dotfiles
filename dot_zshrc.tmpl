@@ -168,6 +168,23 @@ alias ncspot='/usr/bin/flatpak run io.github.hrkfdn.ncspot'
 alias feh='feh -ZF'
 alias open='xdg-open'
 alias perc='~/bin/percentage_change'
+# Bluetooth shortcuts
+alias bt='bluetoothctl'
+alias bt-on='bluetoothctl power on'
+alias bt-off='bluetoothctl power off'
+alias bt-scan='bluetoothctl scan on'
+alias bt-devices='bluetoothctl devices'
+
+# EarFun specific
+alias earfun-on='bluetoothctl connect 00:60:DE:00:B9:C6'
+alias earfun-off='bluetoothctl disconnect 00:60:DE:00:B9:C6'
+alias earfun-info='bluetoothctl info 00:60:DE:00:B9:C6'
+alias earfun-battery='bluetoothctl info 00:60:DE:00:B9:C6 | grep Battery'
+
+# Audio switching
+alias audio-list='pactl list sinks short'
+alias audio-earfun='pactl set-default-sink bluez_output.00_60_DE_00_B9_C6.1'
+alias audio-laptop='pactl set-default-sink alsa_output.pci-0000_00_1f.3.analog-stereo'
 {{ end }}
 
 {{- if eq .chezmoi.hostname "raspberrypi1" }}
