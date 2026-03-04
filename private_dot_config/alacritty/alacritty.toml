@@ -16,3 +16,8 @@ title = 'Alacritty'
 dynamic_title = true
 padding = { x = 0, y = 0 }
 resize_increments = false
+
+[[keyboard.bindings]]
+key = "Return"
+mods = "Shift"
+chars = "\n"
