@@ -1,1 +1,6 @@
 **/*.gpg
+.local/secure/**
+.gmail-mcp/**
+.config/google-calendar-mcp/**
+.config/rclone/rclone.conf
+.opencode/**

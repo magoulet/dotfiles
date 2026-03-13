@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+credentials_path="${GOOGLE_OAUTH_CREDENTIALS:-$HOME/.local/secure/google/mcp-oauth.json}"
+
+if [[ ! -f "$credentials_path" ]]; then
+  printf 'Credentials file not found: %s\n' "$credentials_path" >&2
+  exit 1
+fi
+
+GOOGLE_OAUTH_CREDENTIALS="$credentials_path" npx @cocal/google-calendar-mcp auth
