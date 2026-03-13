@@ -8,7 +8,8 @@
   "instructions": [
     "~/.config/opencode/context/infrastructure.md"
   ],
-  "mcp": {
+  "mcp": {{- if eq .chezmoi.hostname "tars" }} {}
+  {{- else }} {
     "google-calendar-mcp": {
       "type": "local",
       "command": [
@@ -29,4 +30,5 @@
       "timeout": 20000
     }
   }
+  {{- end }}
 }
