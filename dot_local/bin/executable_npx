@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+export NVM_DIR="${NVM_DIR:-$HOME/.nvm}"
+
+if [ ! -s "$NVM_DIR/nvm.sh" ]; then
+  printf 'npx shim: missing nvm.sh at %s\n' "$NVM_DIR/nvm.sh" >&2
+  exit 127
+fi
+
+. "$NVM_DIR/nvm.sh"
+nvm use --silent default >/dev/null 2>&1 || nvm use --silent node >/dev/null 2>&1
+
+node_bin="$(command -v node)"
+npx_bin="${node_bin%/node}/npx"
+
+if [ ! -x "$npx_bin" ]; then
+  printf 'npx shim: unable to find npx next to %s\n' "$node_bin" >&2
+  exit 127
+fi
+
+exec "$npx_bin" "$@"

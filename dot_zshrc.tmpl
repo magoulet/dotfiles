@@ -214,15 +214,20 @@ alias temp='vcgencmd measure_temp'
 
 # Lazy load NVM (makes startup much faster)
 zsh-nvm-lazy-load() {
-  unset -f nvm node npm
+  local cmd="$1"
+  shift
+
+  unset -f nvm node npm npx joplin
   export NVM_DIR="$HOME/.nvm"
   [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
-  "$0" "$@"
+  nvm use --silent default >/dev/null 2>&1 || nvm use --silent node >/dev/null 2>&1
+  "$cmd" "$@"
 }
-node() { zsh-nvm-lazy-load "$@"; }
-npm() { zsh-nvm-lazy-load "$@"; }
-nvm() { zsh-nvm-lazy-load "$@"; }
-joplin() { zsh_nvm_lazy_load "$@"; }
+node() { zsh-nvm-lazy-load node "$@"; }
+npm() { zsh-nvm-lazy-load npm "$@"; }
+npx() { zsh-nvm-lazy-load npx "$@"; }
+nvm() { zsh-nvm-lazy-load nvm "$@"; }
+joplin() { zsh-nvm-lazy-load joplin "$@"; }
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
