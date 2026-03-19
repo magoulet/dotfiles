@@ -139,9 +139,6 @@ fi
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-{{- if ne .chezmoi.os "android" }}
-alias bat='batcat'
-{{ end }}
 alias cal='ncal -b'
 alias cp='cp -arp'
 alias df='df -h -x squashfs -x tmpfs -x devtmpfs'
