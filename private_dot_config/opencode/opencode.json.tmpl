@@ -24,8 +24,7 @@
       "environment": {
         "GOOGLE_OAUTH_CREDENTIALS": "/home/magoulet/.local/secure/google/mcp-oauth.json"
       },
-      "timeout": 20000,
-      "instructions": "Draft calendar events and present to user for review before creating. Do not post until user approves. Use actual newline characters in description fields, not escaped \\n strings."
+      "timeout": 20000
     },
     "gmail": {
       "type": "local",
@@ -33,8 +32,7 @@
         "npx",
         "@gongrzhe/server-gmail-autoauth-mcp"
       ],
-      "timeout": 20000,
-      "instructions": "Draft emails and present to user for review before sending. Do not send until user approves."
+      "timeout": 20000
     }
   }
   {{- end }}
