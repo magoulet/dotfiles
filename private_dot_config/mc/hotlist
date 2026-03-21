@@ -6,7 +6,7 @@ ENTRY "dev" URL "~/dev"
 ---
 ENTRY "/mnt/ext" URL "/mnt/ext"
 ---
-ENTRY "finances" URL "~/gdrive/finances"
+ENTRY "finances" URL "~/ncloud/finances"
 ---
 ENTRY "scan" URL "/mnt/ext/scan"
 
