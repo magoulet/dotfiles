@@ -241,11 +241,8 @@ fi
 # opencode
 export PATH=/home/magoulet/.opencode/bin:$PATH
 
-{{- if eq .chezmoi.hostname "tars" }}
 # Homebrew
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv zsh)"
-{{ end  }}
-
 
 # Kiro CLI post block. Keep at the bottom of this file.
 # [[ -f "${HOME}/.local/share/kiro-cli/shell/zshrc.post.zsh" ]] && builtin source "${HOME}/.local/share/kiro-cli/shell/zshrc.post.zsh"
