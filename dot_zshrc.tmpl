@@ -19,6 +19,9 @@ eval "$(pyenv init - zsh)"
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/.local/bin:$HOME/go/bin:$HOME/bin:/usr/local/bin:$PATH
 
+# Homebrew
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv zsh)"
+
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
@@ -240,9 +243,6 @@ fi
 
 # opencode
 export PATH=/home/magoulet/.opencode/bin:$PATH
-
-# Homebrew
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv zsh)"
 
 # Kiro CLI post block. Keep at the bottom of this file.
 # [[ -f "${HOME}/.local/share/kiro-cli/shell/zshrc.post.zsh" ]] && builtin source "${HOME}/.local/share/kiro-cli/shell/zshrc.post.zsh"
