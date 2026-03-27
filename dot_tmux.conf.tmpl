@@ -8,6 +8,9 @@ bind-key -n End send Escape "OF"
 # Set the correct terminal type
 set -g default-terminal "xterm-256color"
 
+# Reduce delay when pressing Esc
+set -sg escape-time 10
+
 # Split panes
 bind - split-window -v
 bind | split-window -h
