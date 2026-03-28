@@ -166,7 +166,6 @@ alias lsnfs='mount | grep nfs | awk '\''{print $3}'\'''
 alias nfsumount='for m in $(mount | grep nfs | awk '\''{print $3}'\''); do sudo umount $m; done'
 alias nfsmount='sudo mount -a -t nfs'
 
-{{- if eq .chezmoi.arch "amd64" }}
 alias ncspot='/usr/bin/flatpak run io.github.hrkfdn.ncspot'
 alias feh='feh -ZF'
 alias open='xdg-open'
@@ -188,15 +187,8 @@ alias earfun-battery='bluetoothctl info 00:60:DE:00:B9:C6 | grep Battery'
 alias audio-list='pactl list sinks short'
 alias audio-earfun='pactl set-default-sink bluez_output.00_60_DE_00_B9_C6.1'
 alias audio-laptop='pactl set-default-sink alsa_output.pci-0000_00_1f.3.analog-stereo'
-{{ end }}
 
-{{- if eq .chezmoi.hostname "raspberrypi1" }}
-alias goaccess='goaccess /var/log/nginx/access.log --log-format=COMBINED'  
-{{ end  }}
-
-{{- if eq .chezmoi.arch "arm64" }}
 alias temp='vcgencmd measure_temp'  
-{{ end  }}
 
 # Shell Functions
 # joplin() {
