@@ -8,9 +8,6 @@ bind-key -n End send Escape "OF"
 # Set the correct terminal type
 set -g default-terminal "xterm-256color"
 
-# Reduce delay when pressing Esc
-set -sg escape-time 10
-
 # Split panes
 bind - split-window -v
 bind | split-window -h
@@ -39,11 +36,18 @@ set -g status-style "bg=#bc6c25"
 {{ end }}
 
 {{- if eq .chezmoi.hostname "t480s" }}
-set -g pane-active-border-style fg=#145da0,bg=black
-set -g pane-border-style fg=white,bg=black
-set -g pane-border-lines heavy
-set-window-option -g window-status-current-style bg=#145da0,fg=#b1d4e0
-set-window-option -g window-status-style bg=#000c66,fg=white
+# set -g pane-active-border-style fg=#145da0,bg=black
+# set -g pane-border-style fg=white,bg=black
+# set -g pane-border-lines heavy
+# set-window-option -g window-status-current-style bg=#145da0,fg=#b1d4e0
+# set-window-option -g window-status-style bg=#000c66,fg=white
 
-set -g status-style "bg=#000c66" 
+set -g status-style "bg=#000c66"
 {{ end }}
+
+# Vim keybindings
+set -g mode-keys vi
+bind h select-pane -L
+bind j select-pane -D
+bind k select-pane -U
+bind l select-pane -R
