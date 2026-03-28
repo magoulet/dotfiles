@@ -10,10 +10,10 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 # Pyenv
-export PYENV_ROOT="$HOME/.pyenv"
-[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init - zsh)"
-
+# export PYENV_ROOT="$HOME/.pyenv"
+# [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+# eval "$(pyenv init - zsh)"
+ 
 #zmodload zsh/zprof
 
 # If you come from bash you might have to change your $PATH.
@@ -107,7 +107,7 @@ docker-compose
 git
 nvm # Lazy loading (see below)
 python
-# pyenv # Loading manually
+pyenv
 sublime
 tmux
 uv
