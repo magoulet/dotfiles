@@ -23,10 +23,9 @@ set-option -g set-titles on
 set-option -g set-titles-string "#h"
 set -g pane-border-status top
 
-# bind C-c run "tmux save-buffer - | xclip -i -sel clipboard > /dev/null"
-
 # Mouse support
 set -g mouse on
+set -g set-clipboard on
 
 # Style
 {{- if eq .chezmoi.hostname "tars" }}
