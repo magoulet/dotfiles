@@ -1,0 +1,7 @@
+[indicator]
+preview = {}
+
+[flavor]
+dark = "catppuccin-mocha"
+light = "catppuccin-mocha"
+

@@ -1,0 +1,18 @@
+[mgr]
+ratio = [0, 3, 2]
+show_hidden = true
+linemode = "mtime"
+
+[plugin]
+# preloaders = []
+# previewers = []
+
+[[plugin.prepend_fetchers]]
+id  = "git"
+url = "*"
+run = "git"
+
+[[plugin.prepend_fetchers]]
+id  = "git"
+url = "*/"
+run = "git"
