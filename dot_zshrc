@@ -38,6 +38,7 @@ tmuxinator
 uv
 web-search
 zsh-autosuggestions
+zoxide
 )
 
 source $ZSH/oh-my-zsh.sh
