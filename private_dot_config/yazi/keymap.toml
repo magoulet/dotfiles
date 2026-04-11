@@ -22,3 +22,8 @@ desc = "Enter the child directory, or open the file"
 on = "<F4>"
 run = "open"
 desc = "Open file in editor"
+
+[[mgr.prepend_keymap]]
+on = "<C-c>"
+run = "shell -- xclip -selection clipboard < %s"
+desc = "Copy file to clipboard"
