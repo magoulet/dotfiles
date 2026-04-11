@@ -43,6 +43,7 @@ zoxide
 
 source $ZSH/oh-my-zsh.sh
 
+export ZSH_TMUX_CONFIG=$XDG_CONFIG_HOME/tmux/tmux.conf
 export EDITOR=nvim
 export VISUAL=nvim
 
