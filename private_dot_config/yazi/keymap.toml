@@ -24,11 +24,6 @@ run = "open"
 desc = "Open file in editor"
 
 [[mgr.prepend_keymap]]
-on = "<C-w>"
-run = "close_tab"
-desc = "Close tab"
-
-[[mgr.prepend_keymap]]
-on = "<C-c>"
+on = [ "u", "c" ]
 run = "shell -- xclip -selection clipboard < %s"
 desc = "Copy file to clipboard"
