@@ -28,9 +28,10 @@ docker
 docker-compose
 fzf
 git
-nvm
+# nvm
+mise
 python
-pyenv
+# pyenv
 rbw
 sublime
 tmux
