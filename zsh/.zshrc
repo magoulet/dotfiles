@@ -28,15 +28,11 @@ docker
 docker-compose
 fzf
 git
-# nvm
 mise
 python
-# pyenv
 rbw
-sublime
 tmux
 tmuxinator
-uv
 web-search
 zsh-autosuggestions
 zoxide
