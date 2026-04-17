@@ -26,3 +26,7 @@ Host tars
 Host ugreen-nas
   HostName ugreen-nas.lan
   User magoulet
+
+Host arch
+  HostName 192.168.122.24
+  User magoulet
