@@ -36,6 +36,7 @@ python
 rbw
 tmux
 tmuxinator
+vi-mode
 web-search
 zsh-autosuggestions
 zoxide
