@@ -15,6 +15,7 @@
     "modules-right": [
         // "mpd",
         // "idle_inhibitor",
+        "custom/clipboard",
         "pulseaudio",
         "network",
         // "power-profiles-daemon",
@@ -207,6 +208,11 @@
 			"suspend": "systemctl suspend",
 			"hibernate": "systemctl hibernate"
 		}
+    },
+    "custom/clipboard": {
+      "on-click": "cliphist list | rofi -dmenu -display-columns 2 | cliphist decode | wl-copy",
+      "format": "📋",
+      "tooltip-format": "Click to open clipboard history"
     }
 }
 
