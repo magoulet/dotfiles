@@ -1,2 +1,22 @@
 # Sensitive
 ssh/
+
+# gnupg runtime files
+gnupg/.gnupg/crls.d/
+gnupg/.gnupg/pubring.kbx
+gnupg/.gnupg/pubring.kbx~
+gnupg/.gnupg/trustdb.gpg
+
+# bat cached themes
+bat/.config/bat/themes/
+
+# kitty generated theme
+kitty/.config/kitty/current-theme.conf
+
+# tmux plugins
+tmux/.config/tmux/plugins/
+
+# yazi plugins/packages/themes
+yazi/.config/yazi/catppuccin-*.toml
+yazi/.config/yazi/package.toml
+yazi/.config/yazi/plugins/

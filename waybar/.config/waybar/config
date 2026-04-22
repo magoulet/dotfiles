@@ -16,6 +16,7 @@
         // "mpd",
         // "idle_inhibitor",
         "custom/clipboard",
+        "custom/notification",
         "pulseaudio",
         "network",
         // "power-profiles-daemon",
@@ -28,8 +29,8 @@
         "battery",
         "battery#bat2",
         "clock",
-        "tray"
-        // "custom/power"
+        "tray",
+        "custom/power"
     ],
     // Modules configuration
     "hyprland/workspaces": {
@@ -198,11 +199,12 @@
         // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
     },
     "custom/power": {
-        "format" : "⏻ ",
+        "format" : " ⏻ ",
 		"tooltip": false,
 		"menu": "on-click",
 		"menu-file": "$HOME/.config/waybar/power_menu.xml", // Menu file in resources folder
 		"menu-actions": {
+			"lock": "hyprlock",
 			"shutdown": "shutdown",
 			"reboot": "reboot",
 			"suspend": "systemctl suspend",
@@ -211,8 +213,21 @@
     },
     "custom/clipboard": {
       "on-click": "cliphist list | rofi -dmenu -display-columns 2 | cliphist decode | wl-copy",
+      "on-click-right": "cliphist wipe && notify-send 'Clipboard history cleared'",
       "format": "📋",
-      "tooltip-format": "Click to open clipboard history"
+      "tooltip-format": "Click to open clipboard history, right-click to clear"
+    },
+    "custom/notification": {
+      "exec": "swaync-client --subscribe-waybar",
+      "on-click": "swaync-client --toggle-panel",
+      "on-click-right": "swaync-client --toggle-dnd",
+      "return-type": "json",
+      "format": "{icon}",
+      "format-icons": {
+        "none": "󰂚",
+        "dnd": "󰂛",
+        "notification": "󱅫"
+      }
     }
 }
 
