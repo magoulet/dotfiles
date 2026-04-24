@@ -1,6 +1,6 @@
 * {
     /* `otf-font-awesome` and SpaceMono Nerd Font are required to be installed for icons */
-    font-family: "Fira Sans Semibold", FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+    font-family: "Nimbus Sans", "Nimbus Sans Narrow", "Noto Sans", sans-serif;
     font-size: 15px;
     transition: background-color .3s ease-out;
 }
@@ -92,6 +92,7 @@ window#waybar {
   color: #c0caf5;
   border:none;
   border-radius: 15px;
+  margin-top: 2px;
 }
 
 #workspaces button.active {
@@ -107,9 +108,13 @@ window#waybar {
 #custom-arch {
     margin-left: 5px;
     padding: 0 10px;
-    font-size: 25px;
+    font-size: 20px;
     transition: color .5s;
 }
 #custom-arch:hover {
     color: #1793d1;
+}
+
+#clock {
+    margin-top: 5px;
 }
