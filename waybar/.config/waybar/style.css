@@ -96,11 +96,11 @@ window#waybar {
 }
 
 #workspaces button.active {
-    background: #13131d; 
+    background: #353551;
 }
 
 #workspaces button:hover {
-  background: #11111b;
+  background: #575786;
   color: #cdd6f4;
   box-shadow: none;
 }
