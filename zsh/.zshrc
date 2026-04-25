@@ -47,19 +47,16 @@ export EDITOR=nvim
 export VISUAL=nvim
 
 # Aliases
-alias cal='ncal -b'
 alias cp='cp -arp'
 alias df='df -h -x squashfs -x tmpfs -x devtmpfs'
 alias dpsa='docker ps -a --format "table {{.ID}}\t{{.Image}}\t{{.Status}}\t{{.Names}}"'
 alias ducks='du -cksh * | sort -hr | head -n 15'
-alias gdrive='gdrive-manager.sh'
+alias glow='glow -p'
 alias ncloud='nextcloud-manager.sh'
 alias l='lsd -la'
 alias logs='sudo journalctl -b -p err'
 alias lorem='curl http://metaphorpsum.com/paragraphs/4'
-alias mc='mc -u'
 alias nload-main='nload $(\ip route show default | awk "/default/ {print \$5}")'
-alias python='python3'
 alias rm='rm -i'
 alias rsync='rsync -av --progress'
 alias x='exit'
@@ -68,28 +65,9 @@ alias x='exit'
 alias lsnfs='mount | grep nfs | awk '\''{print $3}'\'''
 alias nfsumount='for m in $(mount | grep nfs | awk '\''{print $3}'\''); do sudo umount $m; done'
 alias nfsmount='sudo mount -a -t nfs'
-alias ncspot='/usr/bin/flatpak run io.github.hrkfdn.ncspot'
 alias feh='feh -ZF'
 alias open='xdg-open'
-alias perc='~/bin/percentage_change'
 
-# Bluetooth shortcuts
-alias bt='bluetoothctl'
-alias bt-on='bluetoothctl power on'
-alias bt-off='bluetoothctl power off'
-alias bt-scan='bluetoothctl scan on'
-alias bt-devices='bluetoothctl devices'
-
-# EarFun specific
-alias earfun-on='bluetoothctl connect 00:60:DE:00:B9:C6'
-alias earfun-off='bluetoothctl disconnect 00:60:DE:00:B9:C6'
-alias earfun-info='bluetoothctl info 00:60:DE:00:B9:C6'
-alias earfun-battery='bluetoothctl info 00:60:DE:00:B9:C6 | grep Battery'
-
-# Audio switching
-alias audio-list='pactl list sinks short'
-alias audio-earfun='pactl set-default-sink bluez_output.00_60_DE_00_B9_C6.1'
-alias audio-laptop='pactl set-default-sink alsa_output.pci-0000_00_1f.3.analog-stereo'
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
