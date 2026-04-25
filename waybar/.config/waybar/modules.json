@@ -29,39 +29,39 @@
       "deactivated": ""
     }
   },
-    "wireplumber": {
-        "format": "{icon}  {volume}%",
-        "format-muted": " ",
-        "format-bluetooth": "{icon}{volume}% ",
-        "format-bluetooth-muted": " {icon}",
-        "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
-        "on-scroll-up": "wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 1%+",
-        "on-scroll-down": "wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 1%-",
-        "scroll-step": 1,
-        "format-icons": {
-            "headphone": "",
-            "hands-free": "",
-            "headset": "",
-            "phone": "",
-            "portable": "",
-            "car": "",
-            "default": ["", "", ""]
-        },
-        "tooltip": true,
-        "tooltip-format": "{icon} at {volume}%"
+  "wireplumber": {
+    "format": "{icon}  {volume}%",
+    "format-muted": " ",
+    "format-bluetooth": "{icon}{volume}% ",
+    "format-bluetooth-muted": " {icon}",
+    "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+    "on-scroll-up": "wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 1%+",
+    "on-scroll-down": "wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 1%-",
+    "scroll-step": 1,
+    "format-icons": {
+      "headphone": "",
+      "hands-free": "",
+      "headset": "",
+      "phone": "",
+      "portable": "",
+      "car": "",
+      "default": ["", "", ""]
     },
+    "tooltip": true,
+    "tooltip-format": "{icon} at {volume}%"
+  },
 
-    "wireplumber#source": {
-        "format": "{format_source}  {source_volume}%",
-        "format-source": "",
-        "format-source-muted": "",
-        "on-click": "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle",
-        "on-scroll-up": "wpctl set-volume -l 1 @DEFAULT_AUDIO_SOURCE@ 1%+",
-        "on-scroll-down": "wpctl set-volume -l 1 @DEFAULT_AUDIO_SOURCE@ 1%-",
-        "scroll-step": 1,
-        "tooltip": true,
-        "tooltip-format": "  at {source_volume}%"
-    },
+  "wireplumber#source": {
+    "format": "{format_source}  {source_volume}%",
+    "format-source": "",
+    "format-source-muted": "",
+    "on-click": "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle",
+    "on-scroll-up": "wpctl set-volume -l 1 @DEFAULT_AUDIO_SOURCE@ 1%+",
+    "on-scroll-down": "wpctl set-volume -l 1 @DEFAULT_AUDIO_SOURCE@ 1%-",
+    "scroll-step": 1,
+    "tooltip": true,
+    "tooltip-format": "  at {source_volume}%"
+  },
 
   "network": {
     "format-wifi": "   {signalStrength}%",
@@ -155,5 +155,14 @@
       "dnd": "󰂛 ",
       "notification": "󱅫 "
     }
+  },
+  "custom/media": {
+    "format": "{}",
+    "return-type": "json",
+    "exec": "$HOME/.local/bin/spotify-now-playing.sh",
+    "interval": 1,
+    "on-click": "playerctl play-pause",
+    "on-scroll-up": "playerctl next",
+    "on-scroll-down": "playerctl previous"
   }
 }
