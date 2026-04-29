@@ -97,12 +97,13 @@
       "warning": 30,
       "critical": 15
     },
-    "format": "{icon}  {capacity}%",
-    "format-full": "{icon}  {capacity}%",
-    "format-charging": "  {capacity}%",
-    "format-plugged": "  {capacity}%",
+    "format": "{icon}",
+    "format-full": "{icon}",
+    "format-charging": "󱐋",
+    "format-plugged": "",
     "format-alt": "{time}  {icon}",
-    "format-icons": ["", "", "", "", ""]
+    "format-icons": ["", "", "", "", ""],
+    "tooltip-format": "Battery: {capacity}%\nTime remaining: {time}",
   },
   "battery#bat2": {
     "bat": "BAT2"

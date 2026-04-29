@@ -9,8 +9,8 @@ window#waybar {
     background: rgba(26, 27, 38, 0.75);
     color: #c0caf5;
     font-family: 
-        SpaceMono Nerd Font,
-        feather;
+        "Noto Sans",
+        "MesloLGM Nerd Font";
     transition: background-color .5s;
 }
 
