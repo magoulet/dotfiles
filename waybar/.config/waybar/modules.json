@@ -68,7 +68,8 @@
     "format-ethernet": "   {ipaddr}/{cidr}",
     "tooltip-format": "SSID: {essid} \n if: {ifname} \n Gateway: {gwaddr}",
     "format-linked": "{ifname} (No IP) ",
-    "format-disconnected": "Disconnected ⚠"
+    "format-disconnected": "Disconnected ⚠",
+    "on-click": "kitty gazelle",
   },
 
   "cpu": {
