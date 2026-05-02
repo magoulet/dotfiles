@@ -127,15 +127,7 @@
   "custom/power": {
     "format" : " ",
     "tooltip": false,
-    "menu": "on-click",
-    "menu-file": "$HOME/.config/waybar/power_menu.xml", 
-    "menu-actions": {
-      "lock": "hyprlock",
-      "shutdown": "shutdown",
-      "reboot": "reboot",
-      "suspend": "systemctl suspend",
-      "hibernate": "systemctl hibernate"
-    }
+    "on-click": "rofi -show p -modi p:rofi-power-menu"
   },
   "custom/clipboard": {
     "on-click": "cliphist list | rofi -dmenu -display-columns 2 | cliphist decode | wl-copy",
