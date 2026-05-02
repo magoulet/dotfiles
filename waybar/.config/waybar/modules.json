@@ -29,6 +29,18 @@
       "deactivated": ""
     }
   },
+  "custom/wireguard": {
+    "exec": "exec ~/.local/bin/wireguard-manager.sh -s",
+    "format": "{icon}",
+    "format-icons": {
+      "connected": "<span color=\"#50fa7b\">VPN 🔒</span>",
+      "disconnected": "🔓",
+    },
+    "interval": "once",
+    "on-click": "~/.local/bin/wireguard-manager.sh -t",
+    "return-type": "json",
+    "signal": 1,
+  },
   "wireplumber": {
     "format": "{icon}  {volume}%",
     "format-muted": " ",

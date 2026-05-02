@@ -16,6 +16,7 @@
     ],
     "modules-right": [
         "custom/clipboard",
+        "custom/wireguard",
         "tray",
         "idle_inhibitor",
         "wireplumber",
