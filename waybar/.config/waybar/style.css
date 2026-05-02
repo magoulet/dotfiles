@@ -31,6 +31,7 @@ window#waybar {
 }
 
 #custom-clipboard,
+#custom-wireguard,
 #clock,
 #battery,
 #cpu,
@@ -57,6 +58,7 @@ window#waybar {
 }
 
 #custom-clipboard:hover,
+#custom-wireguard:hover,
 #clock:hover,
 #battery:hover,
 #cpu:hover,
