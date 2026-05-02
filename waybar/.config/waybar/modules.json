@@ -76,7 +76,7 @@
   },
 
   "network": {
-    "format-wifi": "   {signalStrength}%",
+    "format-wifi": " ",
     "format-ethernet": "   {ipaddr}/{cidr}",
     "tooltip-format": "SSID: {essid} \n if: {ifname} \n Gateway: {gwaddr}",
     "format-linked": "{ifname} (No IP) ",
