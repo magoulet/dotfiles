@@ -117,7 +117,7 @@
     "format-alt": "{time}  {icon}",
     "format-icons": ["", "", "", "", ""],
     "tooltip-format": "Battery: {capacity}%\nTime remaining: {time}",
-    "on-click": "~/.local/bin/waybar-battery.sh --menu"
+    "on-click-right": "~/.local/bin/waybar-battery.sh --menu"
   },
   "clock": {
     "format": "{:%m/%d | %I:%M %p}",
