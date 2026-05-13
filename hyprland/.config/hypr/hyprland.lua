@@ -1,3 +1,4 @@
+---@diagnostic disable: undefined-global
 -- This is an example Hyprland Lua config file.
 -- Refer to the wiki for more information.
 -- https://wiki.hypr.land/Configuring/Start/
@@ -53,6 +54,7 @@ hl.on("hyprland.start", function ()
   hl.exec_cmd("wl-paste --type image --watch cliphist store")
   hl.exec_cmd("awww img -o eDP-1 \"/home/magoulet/Pictures/wallpapers/1-sunset-lake.png\"")
   hl.exec_cmd("awww img -o DP-1 \"/home/magoulet/Pictures/wallpapers/1-city-view.png\"")
+  hl.exec_cmd("hyprctl setcursor Bibata-Modern-Classic 24")
 end)
 
 
@@ -63,9 +65,8 @@ end)
 -- See https://wiki.hypr.land/Configuring/Advanced-and-Cool/Environment-variables/
 
 hl.env("XCURSOR_SIZE", "24")
-hl.env("HYPRCURSOR_THEME", "Bibata-Modern-Classic")
+hl.env("HYPRCURSOR_THEME", "Bibata-Modern-Amber")
 hl.env("HYPRCURSOR_SIZE", "24")
-
 
 -----------------------
 ----- PERMISSIONS -----
@@ -267,17 +268,18 @@ local mainMod = "SUPER" -- Sets "Windows" key as main modifier
 -- Example binds, see https://wiki.hypr.land/Configuring/Basics/Binds/ for more
 hl.bind(mainMod .. " + Return", hl.dsp.exec_cmd(terminal))
 local closeWindowBind = hl.bind(mainMod .. " + C", hl.dsp.window.close())
--- closeWindowBind:set_enabled(false)
+closeWindowBind:set_enabled(true)
+-- hl.bind(mainMod .. " + C", hl.dsp.close())
 hl.bind(mainMod .. " + M", hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'"))
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
 hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
-hl.bind(mainMod .. " + R", hl.dsp.exec_cmd(menu))
+hl.bind(mainMod .. " + space", hl.dsp.exec_cmd("rofi -show drun"))
 hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
 -- hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit"))    -- dwindle only -- commented out to avoid conflict with vim focus keys
 
 -- Screenshots
-hl.bind("SHIFT + ALT + 3", hl.dsp.exec_cmd("hyprshot -m region"))
-hl.bind("SHIFT + ALT + 4", hl.dsp.exec_cmd("hyprshot -m window"))
+hl.bind("SHIFT + ALT + 3", hl.dsp.exec_cmd('grim -g "$(slurp)" - | swappy -f -'))
+hl.bind("SHIFT + ALT + 4", hl.dsp.exec_cmd('grim - | swappy -f -'))
 
 -- Lock screen and menus
 hl.bind(mainMod .. " + SHIFT + L", hl.dsp.exec_cmd("hyprlock"))
