@@ -1,0 +1,29 @@
+onboarding = false
+
+[ui]
+agent_panel_sort = "spaces"
+pane_gaps = false
+hide_tab_bar_when_single_tab = true
+
+[keys]
+prefix = "ctrl+s"
+
+focus_pane_left  = "ctrl+h"
+focus_pane_down  = "ctrl+j"
+focus_pane_up    = "ctrl+k"
+focus_pane_right = "ctrl+l"
+
+split_vertical = "prefix+|"
+split_horizontal = "prefix+-"
+
+previous_tab = "prefix+p"
+
+navigate_workspace_up = "k"
+navigate_workspace_down = "j"
+
+[experimental]
+kitty_graphics = true
+
+[theme]
+name = "catppuccin"
+auto_switch = false
