@@ -287,7 +287,7 @@ hl.bind("SHIFT + ALT + 4", hl.dsp.exec_cmd('grim - | swappy -f -'))
 
 -- Lock screen and menus
 hl.bind(mainMod .. " + SHIFT + L", hl.dsp.exec_cmd("hyprlock"))
-hl.bind(mainMod .. " + X",         hl.dsp.exec_cmd("rofi -show p -modi p:rofi-power-menu"))
+hl.bind(mainMod .. " + X",         hl.dsp.exec_cmd("rofi -show power-menu -modi 'power-menu:rofi-power-menu --choices=suspend/lockscreen/logout/reboot/shutdown'"))
 hl.bind(mainMod .. " + SHIFT + E", hl.dsp.exec_cmd("rofi -modi emoji -show emoji"))
 hl.bind(mainMod .. " + SHIFT + B", hl.dsp.exec_cmd("pkill waybar && waybar"))
 

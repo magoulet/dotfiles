@@ -127,7 +127,7 @@
   "custom/power": {
     "format" : " ",
     "tooltip": false,
-    "on-click": "rofi -show p -modi p:rofi-power-menu"
+    "on-click": "rofi -show power-menu -modi 'power-menu:rofi-power-menu --choices=suspend/lockscreen/logout/reboot/shutdown'"
   },
   "custom/clipboard": {
     "on-click": "cliphist list | rofi -dmenu -display-columns 2 | cliphist decode | wl-copy",
