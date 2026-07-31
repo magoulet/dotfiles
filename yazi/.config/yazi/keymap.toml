@@ -17,3 +17,9 @@ desc = "Copy file to clipboard"
 on = ["R","b"]
 run = "plugin recycle-bin"
 desc = "Open Recycle Bin menu"
+
+[[mgr.prepend_keymap]]
+on   = "<?>"
+run  = "help"
+desc = "Show help (workaround for herdr F1 bug)"
+
