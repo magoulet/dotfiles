@@ -56,6 +56,7 @@ hl.on("hyprland.start", function ()
   hl.exec_cmd("wl-paste --type image --watch cliphist store")
   hl.exec_cmd("awww img -o eDP-1 \"/home/magoulet/Pictures/wallpapers/1-sunset-lake.png\"")
   hl.exec_cmd("awww img -o DP-1 \"/home/magoulet/Pictures/wallpapers/1-city-view.png\"")
+  hl.exec_cmd("awww img -o DP-2 \"/usr/share/hypr/wall2.png\"")
   hl.exec_cmd("hyprctl setcursor Bibata-Modern-Classic 24")
 end)
 
