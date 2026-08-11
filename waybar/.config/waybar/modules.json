@@ -81,7 +81,7 @@
     "tooltip-format": "SSID: {essid} \n if: {ifname} \n Gateway: {gwaddr}",
     "format-linked": "{ifname} (No IP) ",
     "format-disconnected": "Disconnected ⚠",
-    "on-click": "kitty gazelle",
+    "on-click": "kitty wlctl",
   },
 
   "cpu": {
