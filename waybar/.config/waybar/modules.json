@@ -5,7 +5,6 @@
     "tooltip-format": "btw"
   },
 
-
   "hyprland/workspaces": {
     "disable-scroll": true,
     "all-outputs": false,
@@ -20,7 +19,7 @@
     }
   },
   "hyprland/window": {
-    "icon": true,
+    "icon": true
   },
   "idle_inhibitor": {
     "format": "{icon}",
@@ -34,12 +33,12 @@
     "format": "{icon}",
     "format-icons": {
       "connected": "<span color=\"#50fa7b\">VPN 🔒</span>",
-      "disconnected": "🔓",
+      "disconnected": "🔓"
     },
     "interval": "once",
     "on-click": "~/.local/bin/wireguard-manager.sh -t",
     "return-type": "json",
-    "signal": 1,
+    "signal": 1
   },
   "wireplumber": {
     "format": "{icon}   {volume}%",
@@ -81,7 +80,7 @@
     "tooltip-format": "SSID: {essid} \n if: {ifname} \n Gateway: {gwaddr}",
     "format-linked": "{ifname} (No IP) ",
     "format-disconnected": "Disconnected ⚠",
-    "on-click": "kitty wlctl",
+    "on-click": "kitty wlctl"
   },
 
   "cpu": {
@@ -121,11 +120,28 @@
   },
   "clock": {
     "format": "{:%m/%d | %I:%M %p}",
-    "tooltip-format": "<tt>{calendar}</tt>",
-    "format-alt": "{:%Y-%m-%d}"
+    "tooltip-format": "<tt><small>{calendar}</small></tt>",
+    "calendar": {
+      "mode": "month",
+      "mode-mon-col": 3,
+      "on-scroll": 1,
+      "on-click": "mode",
+      "format": {
+        "months": "<span color='#ffead3'><b>{}</b></span>",
+        "days": "<span color='#ecc6d9'><b>{}</b></span>",
+        "weeks": "<span color='#99ffdd'><b>W{}</b></span>",
+        "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
+        "today": "<span color='#ff6699'><b><u>{}</u></b></span>"
+      }
+    },
+    "actions": {
+      "on-click": "mode",
+      "on-scroll-up": "shift_up",
+      "on-scroll-down": "shift_down"
+    }
   },
   "custom/power": {
-    "format" : " ",
+    "format": " ",
     "tooltip": false,
     "on-click": "rofi -show power-menu -modi 'power-menu:rofi-power-menu --choices=suspend/lockscreen/logout/reboot/shutdown'"
   },
@@ -146,7 +162,7 @@
     "tooltip-format": "{controller_alias}\t{controller_address}",
     "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
     "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
-    "on-click": "kitty bluetui",
+    "on-click": "kitty bluetui"
   },
   "custom/notification": {
     "exec": "swaync-client --subscribe-waybar",
