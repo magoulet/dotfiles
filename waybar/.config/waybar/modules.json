@@ -59,7 +59,7 @@
       "default": ["", "", ""]
     },
     "tooltip": true,
-    "tooltip-format": "{icon} at {volume}%"
+    "tooltip-format": "{icon}  at {volume}%"
   },
 
   "wireplumber#source": {
