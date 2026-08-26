@@ -1,3 +1,4 @@
+@import "/usr/lib/hyprwhspr/config/waybar/hyprwhspr-style.css";
 * {
     /* `otf-font-awesome` and SpaceMono Nerd Font are required to be installed for icons */
     font-family: "Nimbus Sans", "Nimbus Sans Narrow", "Noto Sans", sans-serif;

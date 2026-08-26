@@ -15,6 +15,7 @@
         "hyprland/window"
     ],
     "modules-right": [
+        "custom/hyprwhspr",
         "custom/clipboard",
         // "custom/wireguard",
         "tray",
@@ -31,6 +32,7 @@
     //Modules configuration
 
     "include": [
-		"~/.config/waybar/modules.json"
+		"~/.config/waybar/modules.json",
+    "~/.config/waybar/hyprwhspr-module.jsonc"
     ]
 }

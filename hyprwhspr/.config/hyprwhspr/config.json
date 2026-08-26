@@ -1,0 +1,10 @@
+{
+  "$schema": "https://raw.githubusercontent.com/goodroot/hyprwhspr/main/share/config.schema.json",
+  "use_hypr_bindings": true,
+  "keyboard_device_names": [
+    "AT Translated Set 2 keyboard",
+    "Logitech MX Keys"
+  ],
+  "transcription_backend": "onnx-asr",
+  "audio_ducking": true
+}
