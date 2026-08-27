@@ -31,6 +31,11 @@ window#waybar {
     padding: 0 10px;
 }
 
+#custom-hyprwhspr {
+    margin: 0;
+}
+
+#custom-hyprwhspr,
 #custom-clipboard,
 #custom-wireguard,
 #clock,
@@ -58,6 +63,7 @@ window#waybar {
     border-radius: 15px;
 }
 
+#custom-hyprwhspr:hover,
 #custom-clipboard:hover,
 #custom-wireguard:hover,
 #clock:hover,
@@ -84,6 +90,10 @@ window#waybar {
     background: rgba(26, 27, 38, 0.9);
 }
 
+
+#custom-hyprwhspr:hover {
+    opacity: 1;
+}
 
 #workspaces button {
   background: transparent;
