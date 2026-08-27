@@ -48,6 +48,7 @@ export EDITOR=nvim
 export VISUAL=nvim
 
 # Aliases
+alias cls='clear'
 alias cp='cp -arp'
 alias df='df -h -x squashfs -x tmpfs -x devtmpfs'
 alias dpsa='docker ps -a --format "table {{.ID}}\t{{.Image}}\t{{.Status}}\t{{.Names}}"'
