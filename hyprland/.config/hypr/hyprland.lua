@@ -31,6 +31,12 @@ hl.monitor({
     scale    = 1.0,
 })
 
+hl.monitor({
+    output   = "DP-1",
+    mode     = "preferred",
+    position = "auto",
+    scale    = 1.0,
+})
 ---------------------
 ---- MY PROGRAMS ----
 ---------------------
@@ -273,7 +279,8 @@ hl.device({
 ---- KEYBINDINGS ----
 ---------------------
 
-local mainMod = "SUPER" -- Sets "Windows" key as main modifier
+local mainMod = "ALT"
+-- local mainMod = "SUPER" -- Sets "Windows" key as main modifier
 
 -- Example binds, see https://wiki.hypr.land/Configuring/Basics/Binds/ for more
 hl.bind(mainMod .. " + Return", hl.dsp.exec_cmd(terminal))
@@ -290,8 +297,8 @@ hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
 -- hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit"))    -- dwindle only -- commented out to avoid conflict with vim focus keys
 
 -- Screenshots
-hl.bind("SHIFT + ALT + 3", hl.dsp.exec_cmd('grim -g "$(slurp)" - | swappy -f -'))
-hl.bind("SHIFT + ALT + 4", hl.dsp.exec_cmd('grim - | swappy -f -'))
+hl.bind("SHIFT + SUPER + 3", hl.dsp.exec_cmd('grim -g "$(slurp)" - | swappy -f -'))
+hl.bind("SHIFT + SUPER + 4", hl.dsp.exec_cmd('grim - | swappy -f -'))
 
 -- Lock screen and menus
 hl.bind(mainMod .. " + SHIFT + L", hl.dsp.exec_cmd("hyprlock"))
