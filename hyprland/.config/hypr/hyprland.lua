@@ -145,7 +145,7 @@ hl.config({
         },
 
         blur = {
-            enabled   = false, -- Disabled 5/4/26 to improve battery life
+            enabled   = true,
             size      = 3,
             passes    = 1,
             vibrancy  = 0.1696,
