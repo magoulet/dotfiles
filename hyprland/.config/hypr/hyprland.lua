@@ -324,6 +324,9 @@ end
 hl.bind(mainMod .. " + SHIFT + bracketright", hl.dsp.workspace.move({ monitor = "+1" }))
 hl.bind(mainMod .. " + SHIFT + bracketleft",  hl.dsp.workspace.move({ monitor = "-1" }))
 
+-- Rename active workspace
+hl.bind(mainMod .. " + SHIFT + R", hl.dsp.exec_cmd("~/.local/bin/hypr-rename-workspace.sh"))
+
 -- Example special workspace (scratchpad)
 hl.bind(mainMod .. " + S",         hl.dsp.workspace.toggle_special("magic"))
 hl.bind(mainMod .. " + SHIFT + S", hl.dsp.window.move({ workspace = "special:magic" }))
