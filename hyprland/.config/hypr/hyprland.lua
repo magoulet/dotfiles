@@ -320,6 +320,10 @@ for i = 1, 10 do
     hl.bind(mainMod .. " + SHIFT + " .. key,     hl.dsp.window.move({ workspace = i }))
 end
 
+-- Move active workspace to next/previous monitor
+hl.bind(mainMod .. " + SHIFT + bracketright", hl.dsp.workspace.move({ monitor = "+1" }))
+hl.bind(mainMod .. " + SHIFT + bracketleft",  hl.dsp.workspace.move({ monitor = "-1" }))
+
 -- Example special workspace (scratchpad)
 hl.bind(mainMod .. " + S",         hl.dsp.workspace.toggle_special("magic"))
 hl.bind(mainMod .. " + SHIFT + S", hl.dsp.window.move({ workspace = "special:magic" }))
