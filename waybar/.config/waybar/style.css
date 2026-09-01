@@ -108,8 +108,14 @@ window#waybar {
   margin-top: 2px;
 }
 
+#workspaces button.visible {
+    background: #28283d;
+    color: #a9b1d6;
+}
+
 #workspaces button.active {
     background: #353551;
+    color: #c0caf5;
 }
 
 #workspaces button:hover {
