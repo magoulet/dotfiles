@@ -82,3 +82,4 @@ fi
 
 # opencode
 export PATH=/home/magoulet/.opencode/bin:$PATH
+eval "$(atuin init zsh)"
