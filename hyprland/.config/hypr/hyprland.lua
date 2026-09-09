@@ -306,6 +306,12 @@ hl.bind(mainMod .. " + X",         hl.dsp.exec_cmd("rofi -show power-menu -modi 
 hl.bind("SHIFT + ALT + E", hl.dsp.exec_cmd("rofi -modi emoji -show emoji"))
 hl.bind(mainMod .. " + SHIFT + B", hl.dsp.exec_cmd("pkill waybar && waybar"))
 
+-- Cycle wallpapers from ~/Pictures/wallpapers via hypr-wallpaper.sh
+hl.bind(mainMod .. " + W",         hl.dsp.exec_cmd("/home/magoulet/.local/bin/hypr-wallpaper.sh next"))
+hl.bind(mainMod .. " + SHIFT + W", hl.dsp.exec_cmd("/home/magoulet/.local/bin/hypr-wallpaper.sh prev"))
+hl.bind(mainMod .. " + CTRL + W",  hl.dsp.exec_cmd("/home/magoulet/.local/bin/hypr-wallpaper.sh random"))
+hl.bind(mainMod .. " + CTRL + P",  hl.dsp.exec_cmd("/home/magoulet/.local/bin/hypr-wallpaper.sh picker"))
+
 -- Move focus with mainMod + vim keys
 hl.bind(mainMod .. " + H", hl.dsp.focus({ direction = "left" }))
 hl.bind(mainMod .. " + J", hl.dsp.focus({ direction = "down" }))
