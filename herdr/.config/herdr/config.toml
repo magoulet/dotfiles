@@ -28,3 +28,9 @@ navigate_workspace_down = "j"
 [experimental]
 kitty_graphics = true
 
+[theme]
+name = "catppuccin"
+auto_switch = false
+
+[theme.custom]
+active_row_bg = "#2a2b3c"
