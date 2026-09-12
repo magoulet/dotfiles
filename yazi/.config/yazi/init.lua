@@ -4,3 +4,7 @@ require("git"):setup {
 }
 
 require("recycle-bin"):setup()
+
+require("zoxide"):setup {
+  update_db = true,
+}
