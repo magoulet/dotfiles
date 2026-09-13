@@ -14,68 +14,22 @@
 ------------------
 ---- MONITORS ----
 ------------------
+require("monitors")
 
--- See https://wiki.hypr.land/Configuring/Basics/Monitors/
-hl.monitor({
-    output   = "eDP-1",
-    mode     = "preferred",
-    position = "auto",
-    scale    = 1.0,
-})
-
-hl.monitor({
-    -- output   = "DP-1",
-    output   = "desc:LG Electronics LG HDR 4K 0x0002E131",
-    mode     = "preferred",
-    position = "auto-center-up",
-    scale    = 1.0,
-})
-
-hl.monitor({
-    output   = "DP-1",
-    mode     = "preferred",
-    position = "auto",
-    scale    = 1.0,
-})
 ---------------------
 ---- MY PROGRAMS ----
 ---------------------
-local programs = require("programs")
+-- local programs = require("programs")
 
 -------------------
 ---- AUTOSTART ----
 -------------------
-
--- See https://wiki.hypr.land/Configuring/Basics/Autostart/
-
--- Autostart necessary processes (like notifications daemons, status bars, etc.)
--- Or execute your favorite apps at launch like this:
---
-hl.on("hyprland.start", function ()
-  hl.exec_cmd(programs.terminal)
-  hl.exec_cmd("waybar")
-  hl.exec_cmd("swaync")
-  hl.exec_cmd("hypridle")
-  hl.exec_cmd("awww-daemon")
-  hl.exec_cmd("gammastep-indicator")
-  hl.exec_cmd("wl-paste --type text --watch cliphist store")
-  hl.exec_cmd("wl-paste --type image --watch cliphist store")
-  hl.exec_cmd("awww img -o eDP-1 \"/home/magoulet/Pictures/wallpapers/1-sunset-lake.png\"")
-  hl.exec_cmd("awww img -o DP-1 \"/home/magoulet/Pictures/wallpapers/1-city-view.png\"")
-  hl.exec_cmd("awww img -o DP-2 \"/usr/share/hypr/wall2.png\"")
-  hl.exec_cmd("hyprctl setcursor Bibata-Modern-Classic 24")
-end)
-
+require("autostart")
 
 -------------------------------
 ---- ENVIRONMENT VARIABLES ----
 -------------------------------
-
--- See https://wiki.hypr.land/Configuring/Advanced-and-Cool/Environment-variables/
-
-hl.env("XCURSOR_SIZE", "24")
-hl.env("HYPRCURSOR_THEME", "Bibata-Modern-Amber")
-hl.env("HYPRCURSOR_SIZE", "24")
+require("environment_variables")
 
 -----------------------
 ----- PERMISSIONS -----
@@ -229,41 +183,7 @@ hl.config({
 ---------------
 ---- INPUT ----
 ---------------
-
-hl.config({
-    input = {
-        kb_layout  = "us",
-        kb_variant = "",
-        kb_model   = "",
-        kb_options = "",
-        kb_rules   = "",
-
-        repeat_delay = 250,
-        repeat_rate = 50,
-
-        follow_mouse = 1,
-
-        sensitivity = 0.4, -- -1.0 - 1.0, 0 means no modification.
-
-        touchpad = {
-            natural_scroll = false,
-        },
-    },
-})
-
-hl.gesture({
-    fingers = 3,
-    direction = "horizontal",
-    action = "workspace"
-})
-
--- Example per-device config
--- See https://wiki.hypr.land/Configuring/Advanced-and-Cool/Devices/ for more
-hl.device({
-    name        = "epic-mouse-v1",
-    sensitivity = -0.5,
-})
-
+require("input")
 
 ---------------------
 ---- KEYBINDINGS ----
@@ -273,5 +193,4 @@ require("keybindings")
 --------------------------------
 ---- WINDOWS AND WORKSPACES ----
 --------------------------------
-
 require("windowrules")
