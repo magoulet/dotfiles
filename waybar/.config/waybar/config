@@ -32,7 +32,7 @@
     //Modules configuration
 
     "include": [
-		"~/.config/waybar/modules.json",
+		"~/.config/waybar/modules.jsonc",
     "~/.config/waybar/hyprwhspr-module.jsonc"
     ]
 }
