@@ -25,14 +25,14 @@ hl.bind("SHIFT + SUPER + 4", hl.dsp.exec_cmd('grim - | swappy -f -'))
 -- Lock screen and menus
 hl.bind(mainMod .. " + SHIFT + L", hl.dsp.exec_cmd("hyprlock"))
 hl.bind(mainMod .. " + X",         hl.dsp.exec_cmd("rofi -show power-menu -modi 'power-menu:rofi-power-menu --choices=suspend/lockscreen/logout/reboot/shutdown'"))
-hl.bind("SHIFT + ALT + E", hl.dsp.exec_cmd("rofi -modi emoji -show emoji"))
+hl.bind(mainMod .. " + SHIFT + E", hl.dsp.exec_cmd("rofi -modi emoji -show emoji"))
 hl.bind(mainMod .. " + SHIFT + B", hl.dsp.exec_cmd("pkill waybar && waybar"))
 
 -- Cycle wallpapers from ~/Pictures/wallpapers via hypr-wallpaper.sh
 hl.bind(mainMod .. " + W",         hl.dsp.exec_cmd("/home/magoulet/.local/bin/hypr-wallpaper.sh next"))
 hl.bind(mainMod .. " + SHIFT + W", hl.dsp.exec_cmd("/home/magoulet/.local/bin/hypr-wallpaper.sh prev"))
-hl.bind(mainMod .. " + CTRL + W",  hl.dsp.exec_cmd("/home/magoulet/.local/bin/hypr-wallpaper.sh random"))
-hl.bind(mainMod .. " + CTRL + P",  hl.dsp.exec_cmd("/home/magoulet/.local/bin/hypr-wallpaper.sh picker"))
+-- hl.bind(mainMod .. " + CTRL + W",  hl.dsp.exec_cmd("/home/magoulet/.local/bin/hypr-wallpaper.sh random"))
+hl.bind(mainMod .. " + SHIFT + P",  hl.dsp.exec_cmd("/home/magoulet/.local/bin/hypr-wallpaper.sh picker"))
 
 -- Move focus with mainMod + vim keys
 hl.bind(mainMod .. " + H", hl.dsp.focus({ direction = "left" }))
