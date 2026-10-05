@@ -25,7 +25,6 @@ export LS_COLORS="${LS_COLORS}:ow=01;34:"
 DISABLE_AUTO_TITLE="true"
 
 plugins=(
-brew
 copyfile
 copypath
 docker
@@ -35,8 +34,6 @@ git
 mise
 python
 rbw
-tmux
-tmuxinator
 web-search
 zsh-autosuggestions
 zoxide
