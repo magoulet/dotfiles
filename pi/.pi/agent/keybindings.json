@@ -1,0 +1,5 @@
+{
+  "app.models.save": "ctrl+alt+s",
+  "app.thinking.save": "ctrl+alt+s",
+  "app.session.toggleSort": "ctrl+alt+s"
+}
