@@ -23,7 +23,8 @@
       "environment": {
         "GOOGLE_OAUTH_CREDENTIALS": "/home/magoulet/.local/secure/google/mcp-oauth.json"
       },
-      "timeout": 20000
+      "timeout": 20000,
+      "enabled": false
     },
     "gmail": {
       "type": "local",
@@ -31,7 +32,8 @@
         "npx",
         "@gongrzhe/server-gmail-autoauth-mcp"
       ],
-      "timeout": 20000
+      "timeout": 20000,
+      "enabled": false
     }
   }
 }
