@@ -38,3 +38,13 @@ hl.window_rule({
     },
     float = true,
 })
+
+-- Matplotlib figures
+hl.window_rule({
+    name  = "Matplotlib figures",
+    match = {
+        title = "^Figure (100|[1-9][0-9]?)",
+    },
+    float = true,
+    center = true,
+})
