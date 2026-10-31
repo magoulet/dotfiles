@@ -1,6 +1,10 @@
 # Sensitive
 ssh/
 
+# opencode local config / credentials
+opencode/.config/opencode/cli.json
+opencode/.config/opencode/service.json
+
 # gnupg runtime files
 gnupg/.gnupg/crls.d/
 gnupg/.gnupg/pubring.kbx
