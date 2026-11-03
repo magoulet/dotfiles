@@ -7,16 +7,31 @@ hl.monitor({
     scale    = 1.0,
 })
 
+-- Rules are applied in order and the LAST matching rule wins for a given
+-- monitor. 
 hl.monitor({
-    -- output   = "DP-1",
-    output   = "desc:LG Electronics LG HDR 4K 0x0002E131",
+    output   = "DP-1",
     mode     = "preferred",
-    position = "auto-center-up",
+    position = "auto",
     scale    = 1.0,
 })
 
 hl.monitor({
-    output   = "DP-1",
+    output   = "desc:LG Electronics LG HDR 4K 0x0002E131",
+    mode     = "preferred",
+    position = "auto",
+    scale    = 1.2,
+})
+
+hl.monitor({
+    output   = "DP-2",
+    mode     = "preferred",
+    position = "auto",
+    scale    = 1.0,
+})
+
+hl.monitor({
+    output   = "HDMI-A-2",
     mode     = "preferred",
     position = "auto",
     scale    = 1.0,
