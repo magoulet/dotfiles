@@ -19,7 +19,7 @@ hl.monitor({
 hl.monitor({
     output   = "desc:LG Electronics LG HDR 4K 0x0002E131",
     mode     = "preferred",
-    position = "auto",
+    position = "auto-center-right",
     scale    = 1.2,
 })
 
