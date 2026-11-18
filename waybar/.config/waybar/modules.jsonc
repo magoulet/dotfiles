@@ -43,7 +43,7 @@
   "wireplumber": {
     "format": "{icon}   {volume}%",
     "format-muted": " ",
-    "format-bluetooth": "{icon} {volume}% ",
+    "format-bluetooth": "{icon}   {volume}% ",
     "format-bluetooth-muted": " {icon}",
     "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
     "on-scroll-up": "wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 1%+",
